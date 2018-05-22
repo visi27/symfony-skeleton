@@ -45,9 +45,9 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
      * LoginFormAuthenticator constructor.
      *
      * @param FormFactoryInterface $formFactory
-     * @param EntityRepository     $userRepository
-     * @param RouterInterface      $router
-     * @param UserPasswordEncoder  $passwordEncoder
+     * @param EntityRepository $userRepository
+     * @param RouterInterface $router
+     * @param UserPasswordEncoder $passwordEncoder
      */
     public function __construct(
         FormFactoryInterface $formFactory,
@@ -68,7 +68,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
         $data = $form->getData();
 
-        if($request->getSession()){
+        if ($request->getSession()) {
             $request->getSession()->set(
                 Security::LAST_USERNAME,
                 $data['_username']
@@ -114,7 +114,8 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         return new RedirectResponse($targetPath);
     }
 
-    public function supports(Request $request){
+    public function supports(Request $request)
+    {
         return ($request->getPathInfo() === '/login' && $request->isMethod('POST'));
     }
 }
