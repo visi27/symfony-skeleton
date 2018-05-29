@@ -22,7 +22,7 @@ defaultCatchAll:
         path: ".+"
 
 homepage:
-  schemes: "http"
+  schemes: "https"
   path: /
   defaults:
     _controller: AppBundle:Web/Main:homepage
