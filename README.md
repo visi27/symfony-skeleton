@@ -71,14 +71,14 @@ API's In Action
 This skeleton app is bundled with a fully featured API Suite. 
 To see the API's in action you can either start the local Symphony server or use onalb.com where I have hosted a copy of this application:
 
-First get the API authentication token by sending a POST request with Basic Authorisation headers to http://onalb.com/api/tokens like this:
+First get the API authentication token by sending a POST request with Basic Authorisation headers to https://api.evisbregu.com/tokens like this:
 
 ```php
 <?php
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://onalb.com/api/tokens",
+  CURLOPT_URL => "https://api.evisbregu.com/tokens",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -111,7 +111,7 @@ wget --quiet \
   --header 'cache-control: no-cache' \
   --header 'postman-token: 7f1fda30-8677-66bd-20b3-394c998a430b' \
   --output-document \
-  - http://onalb.com/api/tokens
+  - https://api.evisbregu.com/tokens
 ```
 the header authorisation has a value Basic base64encoded("username:password") in our case "filanfisteku+1@gmail.com:filanfisteku"
 
@@ -123,7 +123,7 @@ After you have extracted the token you can query the API's for informatin, ex: l
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "http://onalb.com/api/blog",
+  CURLOPT_URL => "https://api.evisbregu.com/blog",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -159,7 +159,7 @@ wget --quiet \
   --header 'cache-control: no-cache' \
   --header 'postman-token: 302acfe0-e68a-2c29-3169-41cf2b799a77' \
   --output-document \
-  - http://onalb.com/api/blog
+  - https://api.evisbregu.com/blog
 ``` 
 
 Tests
