@@ -78,7 +78,7 @@ First get the API authentication token by sending a POST request with Basic Auth
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.evisbregu.com/tokens",
+  CURLOPT_URL => "https://www.evisbregu.com/api/tokens",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -111,11 +111,11 @@ wget --quiet \
   --header 'cache-control: no-cache' \
   --header 'postman-token: 7f1fda30-8677-66bd-20b3-394c998a430b' \
   --output-document \
-  - https://api.evisbregu.com/tokens
+  - https://www.evisbregu.com/api/tokens
 ```
 the header authorisation has a value Basic base64encoded("username:password") in our case "filanfisteku+1@gmail.com:filanfisteku"
 
-After you have extracted the token you can query the API's for informatin, ex: list blog post:
+After you have extracted the token you can query the API's for information, ex: list blog post:
 
 ```php
 <?php
@@ -123,7 +123,7 @@ After you have extracted the token you can query the API's for informatin, ex: l
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api.evisbregu.com/blog",
+  CURLOPT_URL => "https://www.evisbregu.com/api/blog",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -150,7 +150,7 @@ if ($err) {
 ```
 
 Make sure the value of the token is in the key authorization after Bearer.
-In a linux shel with WGET:
+In a linux shell with WGET:
 
 ```bash
 wget --quiet \
@@ -159,7 +159,7 @@ wget --quiet \
   --header 'cache-control: no-cache' \
   --header 'postman-token: 302acfe0-e68a-2c29-3169-41cf2b799a77' \
   --output-document \
-  - https://api.evisbregu.com/blog
+  - https://www.evisbregu.com/api/blog
 ``` 
 
 Tests
