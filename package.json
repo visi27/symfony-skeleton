@@ -14,5 +14,11 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
+  },
+  "scripts": {
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production"
   }
 }

@@ -7,6 +7,8 @@ Encore
   .enableBuildNotifications()
   .enableReactPreset()
   .enableSassLoader()
-  .enableSourceMaps(!Encore.isProduction());
+  .enableSourceMaps(!Encore.isProduction())
+  .cleanupOutputBeforeBuild()
+  .enableVersioning();
 
 module.exports = Encore.getWebpackConfig();
