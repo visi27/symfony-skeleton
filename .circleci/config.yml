@@ -40,12 +40,6 @@ jobs:
     # This is based on your 1.0 configuration file or project settings
     - run:
         working_directory: ~/visi27/symfony-skeleton
-        command: rm /opt/circleci/php/$(phpenv global)/etc/conf.d/xdebug.ini
-    - run:
-        working_directory: ~/visi27/symfony-skeleton
-        command: echo "memory_limit = 512M" > /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini
-    - run:
-        working_directory: ~/visi27/symfony-skeleton
         command: sudo apt-get install --only-upgrade libpcre3
     - run:
         working_directory: ~/visi27/symfony-skeleton
