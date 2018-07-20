@@ -21,4 +21,5 @@ build:
   environment:
     php:
       version: 7.2
+    node: '0.12.4'
 
