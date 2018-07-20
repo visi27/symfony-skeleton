@@ -22,6 +22,8 @@ services:
 #          - blackfire
     env_file:
       - docker-env
+    networks:
+      - sf_skeleton_net
 
   #mysql
   db:
@@ -37,6 +39,8 @@ services:
     volumes:
       - ./data/sql:/var/lib/mysql
       - ./mysql/my.cnf:/etc/mysql/conf.d/z_my.cnf
+    networks:
+      - sf_skeleton_net
 
   #phpmyadmin
   pma:
@@ -55,6 +59,8 @@ services:
       - PMA_HOST=db
       - PMA_USER=root
       - PMA_PASSWORD=root
+    networks:
+    - sf_skeleton_net
 
   elk:
       image: willdurand/elk
@@ -66,8 +72,13 @@ services:
           - ./elk/logstash/patterns:/opt/logstash/patterns
       volumes_from:
           - sf_web
+      networks:
+          - sf_skeleton_net
 
-    #redis-server
+networks:
+  sf_skeleton_net:
+
+#redis-server
 #    redis:
 #        container_name: "sf_redis"
 #        image: redis
