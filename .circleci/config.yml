@@ -68,6 +68,9 @@ jobs:
         command: sudo cp ~/visi27/symfony-skeleton/local.conf /etc/apache2/sites-available
     - run:
         working_directory: ~/visi27/symfony-skeleton
+        command: sudo mkdir /run/lock
+    - run:
+        working_directory: ~/visi27/symfony-skeleton
         command: sudo service apache2 start
     - run:
         working_directory: ~/visi27/symfony-skeleton
