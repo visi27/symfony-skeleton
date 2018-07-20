@@ -88,11 +88,6 @@ jobs:
     - run:
         working_directory: ~/visi27/symfony-skeleton
         command: |-
-          ln -fs << $HOME/.phpenv/versions/7.1.9/libexec/apache2/libphp5.so/usr/lib/apache2/modules/libphp5.so;
-          phpenv global 7.1.9 2>/dev/null
-    - run:
-        working_directory: ~/visi27/symfony-skeleton
-        command: |-
           printf '127.0.0.1       local.dev
           ' | sudo tee -a /etc/hosts
     # Dependencies
