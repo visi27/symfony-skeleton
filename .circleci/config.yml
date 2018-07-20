@@ -80,6 +80,7 @@ jobs:
     - run: if [ -z "${NODE_ENV:-}" ]; then export NODE_ENV=test; fi
     - run: export PATH="~/visi27/symfony-skeleton/node_modules/.bin:$PATH"
     - run: npm install
+    - run: npm run build
     - run: composer install --no-interaction
     # Save dependency cache
     - save_cache:
