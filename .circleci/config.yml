@@ -64,8 +64,8 @@ jobs:
         working_directory: ~/visi27/symfony-skeleton
         command: sudo a2enmod php7.2
     - run:
-        working_directory: /visi27/symfony-skeleton
-        command: sudo cp /visi27/symfony-skeleton/local.conf /etc/apache2/sites-available
+        working_directory: ~/visi27/symfony-skeleton
+        command: sudo cp ~/visi27/symfony-skeleton/local.conf /etc/apache2/sites-available
     - run:
         working_directory: ~/visi27/symfony-skeleton
         command: sudo service apache2 start
