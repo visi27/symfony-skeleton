@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  {{ parent() }}
+  <link href="{{ asset('css/highlight/solarized-light.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+  <!-- Blog Post Content Column -->
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <div id="root"></div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script src="{{ asset('dist/react.js') }}"></script>
+  {{ parent() }}
+{% endblock %}
