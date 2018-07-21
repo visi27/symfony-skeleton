@@ -10,6 +10,7 @@ build:
       - sudo chown www-data.www-data var/jwt/*.*
       - mv behat.scrutinizer.yml behat.yml
       - mv phpunit.scrutinizer.xml phpunit.xml
+      - yarn build
     override:
       -
         command: 'vendor/bin/phpunit'
@@ -21,4 +22,5 @@ build:
   environment:
     php:
       version: 7.2
+    node: '8.11.3'
 
